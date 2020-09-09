@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPaneUserPage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.userPageController">
+   <top>
+      <HBox maxHeight="99.0" prefHeight="90.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="userHomeButton" maxWidth="160.0" minWidth="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="ADMIN PAGE">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Region prefHeight="20.0" prefWidth="900.0" />
+            <Button fx:id="userPageLogOutButton" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="LOG OUT" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="userPageSettingsButton" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="SETTINGS" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="460.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="userInvoiceButton" fx:id="userPageInvoiceButton" minWidth="160.0" mnemonicParsing="false" onAction="#setUserPageInvoiceButton" prefHeight="35.0" prefWidth="160.0" stylesheets="@style.css" text="INVOICE">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="userInventoryButton" fx:id="userPageInventoryButton" minWidth="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="INVENTORY">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="userPageBuyProductButton" minWidth="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="BUY PRODUCT">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="userPageNewProductButton" minWidth="160.0" mnemonicParsing="false" onAction="#setUserPageNewProductButton" prefHeight="25.0" prefWidth="160.0" text="NEW PRODUCT">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="userPageAddCompanyButton" minWidth="160.0" mnemonicParsing="false" onAction="#setUserPageAddCompanyButton" onKeyPressed="#setUserPageAddCompanyButton" prefHeight="25.0" prefWidth="160.0" text="ADD COMPANY">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="userPageAddSrButton" minWidth="160.0" mnemonicParsing="false" onAction="#setUserPageAddSrButton" prefHeight="25.0" prefWidth="160.0" text="ADD S.R.">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button minWidth="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Button">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="50.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="userNameLabel" fx:id="userPageUsernameLabel" minWidth="255.0" prefHeight="17.0" prefWidth="255.0" text="Label">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Region minHeight="25.0" prefHeight="25.0" prefWidth="900.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></Region>
+            <Label minWidth="345.0" prefHeight="17.0" prefWidth="345.0" text="Developed by Sa'd Murshid Khan Adon">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <GridPane fx:id="borderPaneCenterGridpane" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+</BorderPane>

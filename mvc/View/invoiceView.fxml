@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="invoiceAnchorPane" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.InvoiceViewController">
+   <children>
+      <Label layoutX="30.0" layoutY="33.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Customer Name">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <TextField fx:id="customerNameTextfield" layoutX="155.0" layoutY="34.0" maxHeight="25.0" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <TextField fx:id="productNameTextField" layoutX="140.0" layoutY="150.0" onKeyTyped="#getProductNames" prefHeight="25.0" prefWidth="210.0" promptText="Product Name" />
+      <TextField fx:id="companyNameTextField" layoutX="368.0" layoutY="150.0" onKeyTyped="#getCompanyNames" prefHeight="25.0" prefWidth="190.0" promptText="Company Name" />
+      <Button fx:id="nextButton" layoutX="569.0" layoutY="150.0" mnemonicParsing="false" onAction="#getProductDetails" prefHeight="25.0" prefWidth="29.0" text="→" />
+      <TextField fx:id="quantityTextField" layoutX="737.0" layoutY="150.0" maxHeight="25.0" maxWidth="110.0" onKeyTyped="#setAmountLabel" prefHeight="25.0" prefWidth="110.0" promptText="Quantity">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <Label layoutX="30.0" layoutY="71.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Customer Address">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label layoutX="30.0" layoutY="103.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Customer Contact">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <TextField fx:id="productDiscountTextField" layoutX="865.0" layoutY="150.0" maxHeight="25.0" maxWidth="110.0" onKeyTyped="#setAmountLabel" prefHeight="25.0" prefWidth="110.0" promptText="Discount">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextField>
+      <Label fx:id="customerAddressLabel" layoutX="155.0" layoutY="71.0" maxHeight="25.0" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" text="Address ">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Button fx:id="invoiceSearchAddButton" layoutX="1123.0" layoutY="150.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="25.0" prefWidth="100.0" text="ADD" />
+      <Label fx:id="customerContactLabel" layoutX="155.0" layoutY="103.0" maxHeight="25.0" maxWidth="300.0" prefHeight="25.0" prefWidth="300.0" text="Contact Information">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label layoutX="554.0" layoutY="34.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Invoice Number">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label layoutX="554.0" layoutY="71.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Date">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Separator layoutX="13.0" layoutY="138.0" prefHeight="0.0" prefWidth="1275.0" />
+      <Label fx:id="invoiceSearchLabel" layoutX="30.0" layoutY="152.0" prefHeight="20.0" prefWidth="110.0" text="Search" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="productDetailsLabel" layoutX="140.0" layoutY="187.0" maxHeight="25.0" maxWidth="700.0" prefHeight="25.0" prefWidth="700.0" text="Product Details">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <TextField fx:id="discountTextField" layoutX="1098.0" layoutY="265.0" maxHeight="25.0" maxWidth="150.0" onKeyTyped="#setGrandTotalLabel" prefHeight="25.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <TextField fx:id="cashPaidTextField" layoutX="1098.0" layoutY="337.0" maxHeight="25.0" maxWidth="150.0" onKeyTyped="#setCashBackLabel" prefHeight="25.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <Button fx:id="checkOutButton" layoutX="968.0" layoutY="487.0" mnemonicParsing="false" onAction="#checkOutButton" prefHeight="40.0" prefWidth="125.0" text="CHECK OUT" textFill="#008000b3">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="1123.0" layoutY="487.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="CANCEL" textFill="#ff0000b2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <JFXButton fx:id="printButton" layoutX="1036.0" layoutY="546.0" onAction="#printButtonClicked" prefHeight="40.0" prefWidth="125.0" stylesheets="@style.css" text="PRINT" textFill="GREEN">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="invoiceTableView" layoutX="13.0" layoutY="233.0" prefHeight="400.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="noColumn" prefWidth="38.000030517578125" text="NO" />
+            <TableColumn fx:id="productNameColumn" prefWidth="265.0" text="PRODUCT NAME" />
+            <TableColumn fx:id="companyNameColumn" prefWidth="146.99996948242188" text="COMPANY NAME" />
+            <TableColumn fx:id="unitPriceColumn" prefWidth="100.0" text="UNIT PRICE" />
+            <TableColumn fx:id="quantityColumn" prefWidth="97.0" text="QUANTITY" />
+            <TableColumn fx:id="amountColumn" prefWidth="70.0" text="AMOUNT" />
+            <TableColumn fx:id="discountColumn" prefWidth="81.0" text="DISCOUNT" />
+            <TableColumn fx:id="removeColumn" prefWidth="76.0" text="REMOVE" />
+         </columns></TableView>
+      <Label fx:id="invoiceSubTotalLabel" layoutX="967.0" layoutY="233.0" prefHeight="25.0" prefWidth="100.0" text="Sub Total" />
+      <Label fx:id="invoiceDiscountLabel" layoutX="967.0" layoutY="266.0" prefHeight="25.0" prefWidth="100.0" text="Discount" />
+      <Label fx:id="invoiceGrandTotalLabel" layoutX="967.0" layoutY="301.0" prefHeight="25.0" prefWidth="100.0" text="Grand Total">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="invoiceCashPaidLabel" layoutX="967.0" layoutY="338.0" prefHeight="25.0" prefWidth="100.0" text="Cash Paid">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="invoiceCashBackLabel" layoutX="967.0" layoutY="373.0" prefHeight="25.0" prefWidth="100.0" text="Cash Back" />
+      <Label fx:id="invoiceDueLabel" layoutX="967.0" layoutY="424.0" prefHeight="25.0" prefWidth="100.0" text="DUE" textFill="RED">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="subTotalLabel" layoutX="1098.0" layoutY="232.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="Total amount">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label fx:id="grantTotalLabel" layoutX="1098.0" layoutY="300.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="Grand total amount">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label fx:id="cashBackLabel" layoutX="1098.0" layoutY="372.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="cash back amount">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Label fx:id="dueLabel" layoutX="1098.0" layoutY="423.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="due amount">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></Label>
+      <Separator layoutX="13.0" layoutY="637.0" prefHeight="20.0" prefWidth="1275.0" />
+      <Label fx:id="invoiceNumberLabel" layoutX="687.0" layoutY="33.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="Invoice number label">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="687.0" layoutY="71.0" maxHeight="25.0" maxWidth="150.0" prefHeight="25.0" prefWidth="150.0" text="Date label">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="unitPriceLabel" layoutX="623.0" layoutY="150.0" maxHeight="25.0" maxWidth="95.0" prefHeight="25.0" prefWidth="95.0" text="Unit price">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="amountLabel" layoutX="989.0" layoutY="150.0" maxHeight="25.0" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" text="Amount label">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="warningLabel" layoutX="30.0" layoutY="647.0" maxHeight="25.0" maxWidth="900.0" prefHeight="25.0" prefWidth="900.0" text="warning">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="userLabel" layoutX="967.0" layoutY="610.0" maxHeight="25.0" maxWidth="200.0" prefHeight="25.0" prefWidth="200.0" text="USER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label layoutX="1030.0" layoutY="671.0" maxHeight="25.0" maxWidth="220.0" prefHeight="25.0" prefWidth="220.0" text="Developer : Sa'd Murshid Khan Adon">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>

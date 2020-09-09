@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="basicGridpane" layoutX="7.0" prefHeight="421.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.basicGridPaneController">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="186.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="389.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="shopnameLabel" minHeight="27.0" prefHeight="22.0" prefWidth="150.0" text="SHOP NAME" textFill="#cc1c1c" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+            </Label>
+            <Label fx:id="ownernameLabel" minHeight="27.0" prefHeight="27.0" prefWidth="150.0" text="Owner Name" textFill="#cc1c1c" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="addressLabel" minHeight="27.0" prefHeight="27.0" prefWidth="150.0" text="Address" textFill="#cc1c1c" GridPane.rowIndex="3">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="shopnameTextfield" maxWidth="350.0" minHeight="27.0" minWidth="350.0" prefHeight="27.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <Label fx:id="contactLabel" minHeight="27.0" prefHeight="27.0" prefWidth="150.0" text="Contact" textFill="#cc1c1c" GridPane.rowIndex="4">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="ownernameTextfield" maxHeight="27.0" maxWidth="350.0" minHeight="27.0" minWidth="350.0" prefHeight="27.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="addressTextfield" maxHeight="27.0" maxWidth="350.0" minHeight="27.0" minWidth="350.0" prefHeight="27.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="contactTextfield" maxHeight="27.0" maxWidth="350.0" minHeight="27.0" minWidth="350.0" prefHeight="27.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="saveButton" layoutX="51.0" layoutY="18.0" maxHeight="35.0" maxWidth="115.0" minHeight="35.0" minWidth="115.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="115.0" stylesheets="@style.css" text="SAVE" />
+                  <Button fx:id="cancelButton" layoutX="195.0" layoutY="18.0" maxHeight="35.0" maxWidth="115.0" minHeight="35.0" minWidth="115.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" stylesheets="@style.css" text="CANCEL" />
+               </children>
+            </AnchorPane>
+      <Label fx:id="warningLabel" maxHeight="40.0" minHeight="35.0" prefHeight="35.0" text="warningLabel" textFill="#cd1a1a" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+         </children>
+      </GridPane>
